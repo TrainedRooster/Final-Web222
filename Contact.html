@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-  <script defer src="Jade.js"></script>
-  <link rel="stylesheet" href="Jade4.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Jade4.css">
 </head>
 <body>
-  <div class="container">
-    <div class="title">Hire Me</div>
-    <form action="#">
-      <div class="user-details">
-        <div class="input-box">
-          <span class="details">Full Name</span>
-          <input type="text" placeholder="Enter your name" required>
+  
+    <section>
+        <div class="container">
+          <li><a href="Resume.html">Check My Resume</a></li>
+          <li><a href="index.html">Home</a></li>
+          <h2> Hi! Hire Me<br>Please Fill up the Information</h2>
+          <div class=Main>
+            <form name="signup" id="signup" action="https://formspree.io/f/mnqrqrya" method="Post" autocomplete="on" onsubmit="validateFields()">
+              <fieldset>
+                <label for="fullname">Full Name(*)</label><br>
+                <input type="text" id="fullname" name="name" required/>
+                <br>
+                <label for="email">Email(*)</label><br>
+                <input type="email" id="email" name="email" required/>
+                <br> 
+                <label for="phonenumber">Phone Number</label><br>
+                <input type="tel" id="phonenumber" name="phonenumber" title="Phone Number" placeholder="###-##-####" pattern="^\d{3}-\d{3}-\d{4}$"/>
+                <br>
+                <label for="company">Company</label><br>
+                <input type="text" id="company" name="company" />
+                <br>
+                <label for="occupation">Occupation</label><br>
+                <input type="text" id="occupation" name="occupation" />
+                <br>
+                <label for="streetnumber">Street Number</label><br>
+                <input type="number" id="streetnumber" name="streetnumber"/>
+                <br>
+                <label for="streetname">Street Name</label><br>
+                <input type="text" id="streetname" name="streetname" />
+                <br>
+                <label for="city">City</label><br>
+                <input type="text" id="city" name="city" />
+                <br>
+                <label for="province">Province</label><br>
+                <select id="province" name="province" >
+                    <option value="Alberta">Alberta</option>
+                    <option value="British Columbia">British Columbia</option>
+                    <option value="Manitoba">Manitoba</option>
+                    <option value="New Brunswick">New Brunswick</option>
+                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                    <option value="Nova Scotia">Nova Scotia</option>
+                    <option value="Ontario" selected>Ontario</option>
+                    <option value="Prince Edward Island">Prince Edward Island</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Saskatchewan">Saskatchewan</option>
+                </select>
+                <br>
+                <label for="postalcode">Postal Code</label><br>
+                <input type="text" id="postalcode" name="postalcode" placeholder="ex)C1A1A7" />
+                <br>
+                <label for="message">Message(*)</label><br>
+                <textarea name="message" id="message" minlength="5" maxlength="300" required></textarea> 
+                <br>
+                <button  onclick="formValidation()">Submit</button>
+                <button type="reset" name="reset" value="  Clear  " onclick="clearErrors()">Reset</button>
+                <div id="errors"></div>
+              </fieldset>         
+            </form>
+          </div>
         </div>
-        <div class="input-box">
-          <span class="details">Email</span>
-          <input type="text" placeholder="Enter your email" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Address</span>
-          <input type="text" placeholder="Enter your Address" required>
-        </div>
-        <div class="input-box">
-          <span class="details">City</span>
-          <input type="text" placeholder="Where do you live" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Postal Code</span>
-          <input type="text" placeholder="Enter your postal code" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Province</span>
-          <input type="text" placeholder="Enter your province" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Phone Number</span>
-          <input type="tel" id="phonenumber" name="phonenumber" title="Phone Number" placeholder="###-##-####" pattern="^\d{3}-\d{3}-\d{4}$"/>
-        </div>
-        <div class="input-box">
-          <span class="details">Comments</span>
-          <input type="text" placeholder="Comments" required minlength="5" maxlength="300">
-        </div>
-        <button  onclick="formValidation()">Submit</button>
-        <button type="reset" name="reset" value="  Clear  " onclick="clearErrors()">Reset</button>
-        <div id="errors"></div>
-        </div>
-      </div>
-  </div>
+      </section>
 </body>
 </html>

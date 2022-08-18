@@ -1,84 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 *
 {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;
+}
+header
+{
+    display: flex;
+}
+h2
+{
+    display: flex;
+color: #000;
+font-size: 30px;
 }
 body
 {
-    display: flex;
-    height: 100 vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient( 135deg, #71b736,#9b59b6);
+background: linear-gradient(white, navy) ;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
 }
 .container
 {
-    max-width: 700px;
+    position: block;
     width: 100%;
-    background: white;
-    padding: 25px 30px;
-    border-radius: 5px;
+    max-width: 1000px;
+    min-height: 600px;
+    margin: 10px;
 }
-.container .title
+.container .li
 {
-    font-size: 25px;
-    font-weight: 500px;
-    position: relative;
+    float: top;
 }
-.container form .user-details
+li a
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    font: bolder;
+    color: black;
+    font-family: 'Satisfy', cursive;
 }
-form .user-details .input-box
+.container .Main
 {
-    margin: 20px 0 12px 0;
-width: calc(100% / 2 - 20px);
+background: linear-gradient(#71b7e6,#9b59b6);
+color: black;
 }
-.user-details .input-box input .details
+.container .Main label
 {
-    display: block;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+font-family: 'Slabo 27px', serif;
+margin-bottom: 5x;
+margin-top: 5px;
+}
+.container .Main  input
+{
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    min-height: 25px;
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: solid rgba(0, 0, 0, 0,4);
+}
+button
+{
+position: relative;
+margin: 2px;
+height: 100%;
+width: 100%;
+outline: none;
+color: #fff;
+border: none;
+font-size: 18px;
 font-weight: 500;
-margin-bottom: 5px;
-}
-.user-details .input-box input
-{
-    height: 45px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-.user-details .input-box .details .Comments input
-{
-    height: 45px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-button 
-{
-    position: relative;
-    margin: 2px;
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    background: linear-gradient(-135deg, #71b7e6,#9b59b6);
+border-radius: 5px;
+letter-spacing: 1px;
+background: linear-gradient(-135deg, black,silver);
+margin-top: 10px;
+    
 }
 button:hover
 {
-    background: black;
+    color: black;
 }

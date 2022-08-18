@@ -5,6 +5,7 @@ function formValidation() {
     let postalCode = document.querySelector("#postalcode").value;
     let city = document.querySelector("#city").value;
     let Province =document.querySelector("#province")
+}
 
 function clearErrors() {
     document.querySelector("#errors").innerHTML = "";
@@ -12,7 +13,22 @@ function clearErrors() {
 function validationCheck(value) {
     clearErrors();
     formValidation();
+}
 
+
+function validateStreet(streetName) {
+    let errors = document.querySelector("#errors");
+    let charecters = "abcdefghijklmnopqrstuvwxyz";
+    let result=true;
+
+    for (var i = 0; i < streetName.length; i++) {
+        var letter = streetName.substr(i, 1);
+        if (charecters.indexOf(letter.toLowerCase()) < 0) {
+            errors.innerHTML += "<p>* Please do not include digits for Street Name.</p>";
+            result=false;
+        }
+    }
+    return result;
 } 
 
 function validatePhoneNumber(phone) {
@@ -37,18 +53,29 @@ function validateZipcode(zipCode) {
 
 function validateCity(city) {
     let errors = document.querySelector("#errors");
-    let characters = "abcdefghijklmnopqrstuvwxyz";
+    let charecters = "abcdefghijklmnopqrstuvwxyz";
     let result=true;
     for (let i = 0; i < city.length; i++) {
         let letter = city.substr(i, 1);
-        if (characters.indexOf(letter.toLowerCase()) < 0) {
+        if (charecters.indexOf(letter.toLowerCase()) < 0) {
             errors.innerHTML += "<p>* Please do not include digits for city.</p>";
             result= false;
         }
     }
     return result; 
 }
-
+function validateProvince(Province) {
+    let errors = document.querySelector("#errors");
+    let charecters = "abcdefghijklmnopqrstuvwxyz";
+    let result=true;
+    for (let i = 0; i < city.length; i++) {
+        let letter = city.substr(i, 1);
+        if (charecters.indexOf(letter.toLowerCase()) < 0) {
+            errors.innerHTML += "<p>* Please do not include digits for city.</p>";
+            result= false;
+        }
+    }
+    return result; 
 }
 
 function validateFields(){

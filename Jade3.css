@@ -90,6 +90,10 @@ line-height: 1.4em;
     color: aqua;
     font-weight: 500;
 }
+.Education h4
+{
+    color: #fff;
+}
 .Education h4:nth-child(2)
 {
     color: #fff;
@@ -99,6 +103,10 @@ line-height: 1.4em;
 {
     color: #fff;
     font-weight: 300;
+}
+.Language .Text
+{
+    color: #fff;
 }
 .container .right-part
 {
