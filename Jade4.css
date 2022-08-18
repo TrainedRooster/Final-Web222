@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+body
+{
+    display: flex;
+    height: 100 vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( 135deg, #71b736,#9b59b6);
+}
+.container
+{
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title
+{
+    font-size: 25px;
+    font-weight: 500px;
+    position: relative;
+}
+.container form .user-details
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user-details .input-box
+{
+    margin: 20px 0 12px 0;
+width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input .details
+{
+    display: block;
+font-weight: 500;
+margin-bottom: 5px;
+}
+.user-details .input-box input
+{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.user-details .input-box .details .Comments input
+{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+button 
+{
+    position: relative;
+    margin: 2px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(-135deg, #71b7e6,#9b59b6);
+}
+button:hover
+{
+    background: black;
+}
