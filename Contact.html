@@ -25,40 +25,23 @@
                 <label for="email">Email(*)</label><br>
                 <input type="email" id="email" name="email" required/>
                 <br> 
+                <label for="Ad">Address</label><br>
+                <input type="text" id="Address" name="Address" required/>
+                <br>
                 <label for="phonenumber">Phone Number</label><br>
                 <input type="tel" id="phonenumber" name="phonenumber" title="Phone Number" placeholder="###-##-####" pattern="^\d{3}-\d{3}-\d{4}$"/>
                 <br>
                 <label for="company">Company</label><br>
-                <input type="text" id="company" name="company" />
+                <input type="text" id="company" name="company" required/>
                 <br>
                 <label for="occupation">Occupation</label><br>
                 <input type="text" id="occupation" name="occupation" />
                 <br>
-                <label for="streetnumber">Street Number</label><br>
-                <input type="number" id="streetnumber" name="streetnumber"/>
-                <br>
-                <label for="streetname">Street Name</label><br>
-                <input type="text" id="streetname" name="streetname" />
-                <br>
                 <label for="city">City</label><br>
-                <input type="text" id="city" name="city" />
-                <br>
-                <label for="province">Province</label><br>
-                <select id="province" name="province" >
-                    <option value="Alberta">Alberta</option>
-                    <option value="British Columbia">British Columbia</option>
-                    <option value="Manitoba">Manitoba</option>
-                    <option value="New Brunswick">New Brunswick</option>
-                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
-                    <option value="Nova Scotia">Nova Scotia</option>
-                    <option value="Ontario" selected>Ontario</option>
-                    <option value="Prince Edward Island">Prince Edward Island</option>
-                    <option value="Quebec">Quebec</option>
-                    <option value="Saskatchewan">Saskatchewan</option>
-                </select>
+                <input type="text" id="city" name="city" required/>
                 <br>
                 <label for="postalcode">Postal Code</label><br>
-                <input type="text" id="postalcode" name="postalcode" placeholder="ex)C1A1A7" />
+                <input type="text" id="postalcode" name="postalcode" placeholder="ex)C1A1A7" required pattern="^\{3}-\{3}/> 
                 <br>
                 <label for="message">Message(*)</label><br>
                 <textarea name="message" id="message" minlength="5" maxlength="300" required></textarea> 
