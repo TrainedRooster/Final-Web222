@@ -4,7 +4,7 @@ function formValidation() {
     let phone = document.querySelector("#phonenumber").value;
     let postalCode = document.querySelector("#postalcode").value;
     let city = document.querySelector("#city").value;
-    let Province =document.querySelector("#province")
+    let Address =document.querySelector("#address")
 }
 
 function clearErrors() {
@@ -13,22 +13,8 @@ function clearErrors() {
 function validationCheck(value) {
     clearErrors();
     formValidation();
-}
 
 
-function validateStreet(streetName) {
-    let errors = document.querySelector("#errors");
-    let charecters = "abcdefghijklmnopqrstuvwxyz";
-    let result=true;
-
-    for (var i = 0; i < streetName.length; i++) {
-        var letter = streetName.substr(i, 1);
-        if (charecters.indexOf(letter.toLowerCase()) < 0) {
-            errors.innerHTML += "<p>* Please do not include digits for Street Name.</p>";
-            result=false;
-        }
-    }
-    return result;
 } 
 
 function validatePhoneNumber(phone) {
@@ -41,10 +27,10 @@ function validatePhoneNumber(phone) {
     return true;
 }
 
-function validateZipcode(zipCode) {
+function validateZipcode(postalCode) {
     let errors = document.querySelector("#errors");
     let regex = /^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$/;
-    if(!regex.test(zipCode)){
+    if(!regex.test(postalCode)){
         alert("Wrong formation of Zipcode");
         return false;
       }
@@ -64,19 +50,7 @@ function validateCity(city) {
     }
     return result; 
 }
-function validateProvince(Province) {
-    let errors = document.querySelector("#errors");
-    let charecters = "abcdefghijklmnopqrstuvwxyz";
-    let result=true;
-    for (let i = 0; i < city.length; i++) {
-        let letter = city.substr(i, 1);
-        if (charecters.indexOf(letter.toLowerCase()) < 0) {
-            errors.innerHTML += "<p>* Please do not include digits for city.</p>";
-            result= false;
-        }
-    }
-    return result; 
-}
+
 
 function validateFields(){
     if(!formValidation()){       
